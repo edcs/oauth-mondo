@@ -1,0 +1,39 @@
+{
+    "name": "edcs/oauth-mondo",
+    "description": "Mondo Provider for the OAuth 2.0 Client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edward Coleridge Smith",
+            "email": "e.coleridgesmith@edcs.me",
+            "homepage": "https://edcs.me"
+        }
+    ],
+    "keywords": [
+        "oauth",
+        "oauth2",
+        "client",
+        "authorization",
+        "authentication",
+        "mondo"
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "league/oauth2-client": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "~0.9",
+        "squizlabs/php_codesniffer": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Edcs\\OAuth2\\Client\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Edcs\\OAuth2\\Client\\Client\\Test\\": "test/src/"
+        }
+    }
+}
