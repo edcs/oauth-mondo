@@ -1,4 +1,5 @@
 <?php
+
 namespace Edcs\OAuth2\Client\Client\Test;
 
 use Edcs\OAuth2\Client\Provider\Mondo;
@@ -22,9 +23,9 @@ class MondoTest extends PHPUnit_Framework_TestCase
     protected function setUpProvider()
     {
         $this->provider = new Mondo([
-            'clientId' => 'mock_client_id',
+            'clientId'     => 'mock_client_id',
             'clientSecret' => 'mock_secret',
-            'redirectUri' => 'none',
+            'redirectUri'  => 'none',
         ]);
     }
 
@@ -118,7 +119,7 @@ class MondoTest extends PHPUnit_Framework_TestCase
         $postResponse->shouldReceive('getStatusCode')->andReturn(200);
 
         $userResponse = m::mock('Psr\Http\Message\ResponseInterface');
-        $userResponse->shouldReceive('getBody')->andReturn('{"authenticated": true,"client_id": "client_id","user_id": "' . $userId . '"}');
+        $userResponse->shouldReceive('getBody')->andReturn('{"authenticated": true,"client_id": "client_id","user_id": "'.$userId.'"}');
         $userResponse->shouldReceive('getHeader')->andReturn(['content-type' => 'json']);
         $userResponse->shouldReceive('getStatusCode')->andReturn(200);
 

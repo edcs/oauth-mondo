@@ -1,4 +1,5 @@
 <?php
+
 namespace Edcs\Oauth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\AbstractProvider;
@@ -28,6 +29,7 @@ class Mondo extends AbstractProvider
      * Eg. https://oauth.service.com/token
      *
      * @param array $params
+     *
      * @return string
      */
     public function getBaseAccessTokenUrl(array $params)
@@ -39,6 +41,7 @@ class Mondo extends AbstractProvider
      * Returns the URL for requesting the resource owner's details.
      *
      * @param AccessToken $token
+     *
      * @return string
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
@@ -68,22 +71,25 @@ class Mondo extends AbstractProvider
      * No default is provided, providers must overload this method to activate
      * authorization headers.
      *
-     * @param  mixed|null $token Either a string or an access token instance
+     * @param mixed|null $token Either a string or an access token instance
+     *
      * @return array
      */
     protected function getAuthorizationHeaders($token = null)
     {
         return [
-            'authorization' => 'Bearer ' . $token->getToken()
+            'authorization' => 'Bearer '.$token->getToken(),
         ];
     }
 
     /**
      * Checks a provider response for errors.
      *
+     * @param ResponseInterface $response
+     * @param array|string      $data     Parsed response data
+     *
      * @throws IdentityProviderException
-     * @param  ResponseInterface $response
-     * @param  array|string $data Parsed response data
+     *
      * @return void
      */
     protected function checkResponse(ResponseInterface $response, $data)
@@ -101,8 +107,9 @@ class Mondo extends AbstractProvider
      * Generates a resource owner object from a successful resource owner
      * details request.
      *
-     * @param  array $response
-     * @param  AccessToken $token
+     * @param array       $response
+     * @param AccessToken $token
+     *
      * @return ResourceOwnerInterface
      */
     protected function createResourceOwner(array $response, AccessToken $token)

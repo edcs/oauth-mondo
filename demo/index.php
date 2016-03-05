@@ -20,23 +20,21 @@ if (!isset($_GET['code'])) {
 
 // Check given state against previously stored one to mitigate CSRF attack
 } elseif (empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) {
-
     unset($_SESSION['oauth2state']);
     exit('Invalid state');
-
 } else {
 
     // Try to get an access token (using the authorization code grant)
     $token = $provider->getAccessToken('authorization_code', [
-        'code' => $_GET['code']
+        'code' => $_GET['code'],
     ]);
 
     // Store the token in the session so we can refresh the page while we're testing
     $_SESSION['access_token'] = [
-        'access_token' => $token->getToken(),
-        'expires' => $token->getExpires(),
-        'refresh_token' => $token->getRefreshToken(),
-        'resource_owner_id' => $token->getResourceOwnerId()
+        'access_token'      => $token->getToken(),
+        'expires'           => $token->getExpires(),
+        'refresh_token'     => $token->getRefreshToken(),
+        'resource_owner_id' => $token->getResourceOwnerId(),
     ];
 
     // Optional: Now you have a token you can look up a users profile data
