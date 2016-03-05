@@ -1,4 +1,5 @@
 <?php
+
 namespace Edcs\OAuth2\Client\Client\Test;
 
 use Edcs\OAuth2\Client\Provider\Mondo;
