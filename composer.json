@@ -34,7 +34,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Edcs\\OAuth2\\Client\\Client\\Test\\": "test/src/"
+            "Edcs\\OAuth2\\Client\\Test\\": "test/src/"
         }
     }
 }
