@@ -1,6 +1,6 @@
 <?php
 
-namespace Edcs\OAuth2\Client\Test;
+namespace Edcs\OAuth2\Client\Test\Client;
 
 use Edcs\OAuth2\Client\Provider\Mondo;
 use Mockery as m;
