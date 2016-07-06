@@ -3,6 +3,7 @@
 [![Codeship Status for edcs/oauth-mondo](https://codeship.com/projects/ceb79fd0-c50d-0133-0fd4-62b97b21679d/status?branch=master)](https://codeship.com/projects/138484)
 [![Coverage Status](https://coveralls.io/repos/github/edcs/oauth-mondo/badge.svg?branch=master)](https://coveralls.io/github/edcs/oauth-mondo?branch=master)
 [![StyleCI](https://styleci.io/repos/53205114/shield)](https://styleci.io/repos/53205114)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/41068e01-e186-4178-ac5f-f31b38beac28/mini.png)](https://insight.sensiolabs.com/projects/41068e01-e186-4178-ac5f-f31b38beac28)
 
 This package provides Mondo OAuth 2.0 support for the PHP League's 
 [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
