@@ -34,7 +34,7 @@ class Mondo extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return 'https://api.getmondo.co.uk/oauth2/token';
+        return 'https://api.monzo.com/oauth2/token';
     }
 
     /**
@@ -46,7 +46,7 @@ class Mondo extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return 'https://api.getmondo.co.uk/ping/whoami';
+        return 'https://api.monzo.com/ping/whoami';
     }
 
     /**
