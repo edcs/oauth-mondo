@@ -5,7 +5,7 @@
 [![StyleCI](https://styleci.io/repos/53205114/shield)](https://styleci.io/repos/53205114)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/41068e01-e186-4178-ac5f-f31b38beac28/mini.png)](https://insight.sensiolabs.com/projects/41068e01-e186-4178-ac5f-f31b38beac28)
 
-This package provides Mondo OAuth 2.0 support for the PHP League's 
+This package provides Mondo OAuth 2.0 support for the PHP League's
 [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Installation
@@ -13,7 +13,7 @@ This package provides Mondo OAuth 2.0 support for the PHP League's
 To install, use composer:
 
 ```bash
-composer require edcs/oauth2-mondo
+composer require edcs/oauth-mondo
 ```
 
 ### Authorization Code Flow
@@ -45,7 +45,7 @@ if (!isset($_GET['code'])) {
     $token = $provider->getAccessToken('authorization_code', [
         'code' => $_GET['code']
     ]);
-    
+
     // Now you can do something useful with the access token.
     var_dump($token);
 
@@ -71,9 +71,9 @@ $ ./vendor/bin/phpunit
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/edcs/oauth2-mondo/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/edcs/oauth-mondo/blob/master/CONTRIBUTING.md) for details.
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/edcs/oauth2-mondo/blob/master/LICENSE) for 
+The MIT License (MIT). Please see [License File](https://github.com/edcs/oauth-mondo/blob/master/LICENSE) for
 more information.
