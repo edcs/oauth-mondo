@@ -1,5 +1,5 @@
 {
-    "name": "edcs/oauth-mondo",
+    "name": "edcs/oauth2-mondo",
     "description": "Mondo Provider for the OAuth 2.0 Client",
     "license": "MIT",
     "authors": [
