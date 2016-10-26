@@ -51,9 +51,9 @@ if (!isset($_GET['code'])) {
 
     // Optional: Store the token in the session so we can refresh the page while we're testing
     $_SESSION['access_token'] = [
-        'access_token' => $token->getToken(),
-        'expires' => $token->getExpires(),
-        'refresh_token' => $token->getRefreshToken(),
+        'access_token'      => $token->getToken(),
+        'expires'           => $token->getExpires(),
+        'refresh_token'     => $token->getRefreshToken(),
         'resource_owner_id' => $token->getResourceOwnerId()
     ];
 
